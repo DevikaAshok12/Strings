@@ -5,7 +5,7 @@ int main()
 {
     char str[100];
     printf("Enter the string :");
-    scanf("%s",str);
+    scanf("%[^\n]",str);
     int ret=my_strlen(str);
     printf("String length is %d",ret);
 }
