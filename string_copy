@@ -1,0 +1,24 @@
+#include <stdio.h>
+char *my_strcp(char *dest,const char *src)
+{
+    int count=0;
+    while(*src!='\0')
+    {
+        *dest++=*src++;
+        count++;
+    }
+    *dest='\0';
+    dest=dest-count;
+    //return dest;
+}
+int main()
+{
+    char dest[100];
+    char src[100];
+    //char *ret;
+    printf("Enter the string :");
+    scanf("%[^\n]",src);
+    my_strcp(dest,src);
+    printf("Copied string is %s\n",dest);
+    return 0;
+}
