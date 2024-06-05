@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+char *my_strcat(char *dest,const char *src);
+int main()
+{
+    char dest[50];
+    char src[50];
+    printf("Enter the string1:");
+    scanf("%[^\n]",dest);
+    //printf("\n");
+    getchar();
+    printf("Enter the string2:");
+    scanf("%[^\n]",src);
+   // printf("\n");
+    my_strcat(dest,src);
+    printf("concatenate string is %s",dest);
+    return 0;
+}
+char *my_strcat(char *dest,const char *src)
+{
+    int len1=strlen(dest);
+    //printf("%d",len1);
+    int len2=strlen(src);
+    for(int i=0;i<=len2;i++)
+    {
+        dest[len1+i]=src[i];
+    }
+   // dest = '\0';
+    
+}
